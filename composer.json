@@ -1,0 +1,26 @@
+{
+  "name": "be/theme-costumier",
+  "type": "library",
+  "description": "服务供应商主题",
+  "keywords": [
+    "服务",
+    "供应商",
+    "主题"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "1024i",
+      "email": "1024i@1024i.com",
+      "homepage": "https://www.1024i.com/"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Be\\Theme\\Costumier\\": "src/"
+    }
+  },
+  "require": {
+    "be/be": "*"
+  }
+}
