@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    min-width: 320px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+a {
+    text-decoration: none;
+    transition: all .3s ease-in-out;;
+}
+
+a:active, a:hover {
+    outline: none;
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+.link-hover {
+    position: relative;
+}
+
+.link-hover:hover {
+    text-decoration: none;
+}
+
+.link-hover:before {
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    content: '';
+    display: block;
+    transition: width 0.3s ease;
+    visibility: hidden;
+}
+
+.link-hover:hover:before {
+    width: 100%;
+    visibility: visible;
+}
+
+.round-be-floating .be-input {
+    border-radius: 2rem;
+    padding-left: 1.5rem !important;
+}
+
+.round-be-floating .be-floating-label {
+    padding-left: 1.5rem;
+}
+
+.round-be-input {
+    border-radius: 1.5rem;
+    padding-left: 1.2rem !important;
+}
+
+
+@keyframes ajaxLoading {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+#ajax-loader {
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    width: 60px;
+    height: 60px;
+    z-index: 1050;
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 10px;
+    display: none;
+}
+
+#ajax-loader div {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    width: 35px;
+    height: 35px;
+    border: 4px solid;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -moz-animation: ajaxLoading 1.2s cubic-bezier(.5, 0, .5, 1) infinite;
+    -webkit-animation: ajaxLoading 1.2s cubic-bezier(.5, 0, .5, 1) infinite;
+    -o-animation: ajaxLoading 1.2s cubic-bezier(.5, 0, .5, 1) infinite;
+    animation: ajaxLoading 1.2s cubic-bezier(.5, 0, .5, 1) infinite;
+    border-color: var(--main-color) transparent transparent transparent;
+}
+
+#ajax-loader div:nth-child(1) {
+    -moz-animation-delay: -0.45s;
+    -webkit-animation-delay: -0.45s;
+    -o-animation-delay: -0.45s;
+    animation-delay: -0.45s
+}
+
+#ajax-loader div:nth-child(2) {
+    -moz-animation-delay: -0.3s;
+    -webkit-animation-delay: -0.3s;
+    -o-animation-delay: -0.3s;
+    animation-delay: -0.3s
+}
+
+#ajax-loader div:nth-child(3) {
+    -moz-animation-delay: -0.15s;
+    -webkit-animation-delay: -0.15s;
+    -o-animation-delay: -0.15s;
+    animation-delay: -0.15s
+}
+
+#overlay {
+    position: fixed;
+    background-color: rgba(35, 35, 35, .8);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+}
+
+#goto-top {
+    display: none;
+    background-color: var(--main-color);
+    color: #fff;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 16px;
+    z-index: 999;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#goto-top:hover {
+    background-color: var(--main-color-hover);
+}
+
+/* --------------------------------- validator --------------------------------- */
+
+form .be-input.error,
+form .be-select.error,
+form .be-textarea.error {
+    border-color: var(--color-red);
+    box-shadow: 0 0 0 1px var(--color-red);
+}
+
+form label.error {
+    color: var(--color-red);
+    margin-top: 5px;
+    display: inline-block;
+}
