@@ -39,7 +39,7 @@ class Config
      *     driver = "FormItemInputNumberInt",
      *     ui="return ['form-item' => ['v-show' => 'formData.autoplay === 1']];")
      */
-    public int $speed = 300;
+    public int $speed = 1000;
 
     /**
      * @BeConfigItem("循环",

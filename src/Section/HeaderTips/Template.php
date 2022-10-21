@@ -23,7 +23,7 @@ class Template extends Section
         echo '@media (min-width: 1200px) {';
 
         echo '.header-tips {';
-        echo 'background-color: var(--main-color);';
+        echo 'background-color: var(--major-color);';
         echo 'color: #fff;';
         echo 'height: 50px;';
         echo 'line-height: 50px;';
@@ -39,23 +39,23 @@ class Template extends Section
         echo 'color: #eee;';
         echo '}';
 
-        echo '.header-tips-im-icons {';
+        echo '.header-tips-social-icons {';
         echo 'padding-left: 30px;';
         echo '}';
 
-        echo '.header-tips-im-icons a {';
+        echo '.header-tips-social-icons a {';
         echo 'margin: 0 5px;';
         echo 'padding: 5px;';
         echo 'border: #fff 1px solid;';
         echo 'border-radius: 50%;';
         echo '}';
 
-        echo '.header-tips-im-icons a:hover {';
+        echo '.header-tips-social-icons a:hover {';
         echo 'background-color: #fff;';
-        echo 'color: var(--main-color);';
+        echo 'color: var(--major-color);';
         echo '}';
 
-        echo '.header-tips-im-icons i {';
+        echo '.header-tips-social-icons i {';
         echo '}';
 
         echo '}';
@@ -93,27 +93,27 @@ class Template extends Section
 
             echo '<div class="be-col-auto">';
 
-            echo '<div class=" header-tips-im-icons">';
-            if ($this->config->imFacebook !== '') {
-                echo '<a href="https://www.facebook.com/'.$this->config->imFacebook.'/" target="_blank">';
+            echo '<div class="header-tips-social-icons">';
+            if ($this->config->socialFacebook !== '') {
+                echo '<a href="https://www.facebook.com/'.$this->config->socialFacebook.'/" target="_blank">';
                 echo '<i class="bi-facebook"></i>';
                 echo '</a>';
             }
 
-            if ($this->config->imTwitter !== '') {
-                echo '<a href="https://twitter.com/'.$this->config->imTwitter.'/" target="_blank">';
+            if ($this->config->socialTwitter !== '') {
+                echo '<a href="https://twitter.com/'.$this->config->socialTwitter.'/" target="_blank">';
                 echo '<i class="bi-twitter"></i>';
                 echo '</a>';
             }
 
-            if ($this->config->imLinkedin !== '') {
-                echo '<a href="https://www.linkedin.com/'.$this->config->imLinkedin.'/" target="_blank">';
+            if ($this->config->socialLinkedin !== '') {
+                echo '<a href="https://www.linkedin.com/'.$this->config->socialLinkedin.'/" target="_blank">';
                 echo '<i class="bi-linkedin"></i>';
                 echo '</a>';
             }
 
-            if ($this->config->imInstagram !== '') {
-                echo '<a href="https://www.instagram.com/'.$this->config->imInstagram.'/" target="_blank">';
+            if ($this->config->socialInstagram !== '') {
+                echo '<a href="https://www.instagram.com/'.$this->config->socialInstagram.'/" target="_blank">';
                 echo '<i class="bi-instagram"></i>';
                 echo '</a>';
             }

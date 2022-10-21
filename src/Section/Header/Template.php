@@ -17,7 +17,7 @@ class Template extends Section
         echo 'position: sticky;';
         echo 'top: 0;';
         echo 'z-index: 999;';
-        echo 'background-color: var(--title-color);';
+        echo 'background-color: var(--minor-color);';
         echo 'height: 95px;';
         echo 'padding-left: 0;';
         echo 'padding-right: 0;';
@@ -28,33 +28,31 @@ class Template extends Section
         echo 'line-height: 95px;';
         echo '}';
 
-        if ($this->config->logoType == 'text') {
-            echo '.header-logo a {';
-            echo 'color: #fff;';
-            echo 'font-size: 30px;';
-            echo '}';
-
-            echo '.header-logo a:hover {';
-            echo 'text-decoration: none;';
-            echo '}';
-        } else {
-            echo '.header-logo img {';
-            if ($this->config->logoImageMaxWidth) {
-                echo 'max-width:' . $this->config->logoImageMaxWidth . 'px;';
-            }
-            if ($this->config->logoImageMaxHeight) {
-                echo 'max-height:' . min($this->config->logoImageMaxHeight, 90) . 'px;';
-            }
-            echo '}';
+        echo '.header-logo img {';
+        echo 'vertical-align: middle;';
+        if ($this->config->logoMaxWidth) {
+            echo 'max-width:' . $this->config->logoMaxWidth . 'px;';
         }
-
+        if ($this->config->logoMaxHeight) {
+            echo 'max-height:' . min($this->config->logoMaxHeight, 90) . 'px;';
+        }
+        echo '}';
 
         echo '.header-menu {';
         echo 'height: 95px;';
         echo 'line-height: 95px;';
         echo 'position: relative;';
         echo 'z-index: 100;';
-        echo 'margin-left: 120px;';
+        echo 'margin-left: 80px;';
+        echo '}';
+
+        echo '.header-menu ul {';
+        echo 'padding: 0;';
+        echo 'margin: 0;';
+        echo '}';
+
+        echo '.header-menu li {';
+        echo 'list-style: none;';
         echo '}';
 
         echo '.header-menu-lv1-item,';
@@ -73,7 +71,7 @@ class Template extends Section
         echo '.header-menu-lv1-item-active > a,';
         echo '.header-menu-lv1-item-with-dropdown > a:hover,';
         echo '.header-menu-lv1-item > a:hover {';
-        echo 'color: var(--main-color);';
+        echo 'color: var(--major-color);';
         echo '}';
 
         echo '.header-menu-lv1-item-with-dropdown:after {';
@@ -111,14 +109,14 @@ class Template extends Section
 
         echo '.header-menu-lv2-item-active, ';
         echo '.header-menu-lv2-item:hover {';
-        echo 'color: var(--main-color);';
+        echo 'color: var(--major-color);';
         echo '}';
 
         echo '.header-menu-icon {';
         echo 'height: 95px;';
         echo 'line-height: 95px;';
         echo 'font-size: 35px;';
-        echo 'color: var(--main-color);';
+        echo 'color: var(--major-color);';
         echo '}';
 
         echo '.header-menu-icon-title {';
@@ -139,7 +137,7 @@ class Template extends Section
         echo '}';
 
         echo '.header-menu-icon-content a:hover {';
-        echo 'color: var(--main-color);';
+        echo 'color: var(--major-color);';
         echo '}';
 
         // 电脑端
@@ -176,13 +174,7 @@ class Template extends Section
             echo '<div class="be-col-auto">';
             echo '<div class="header-logo">';
             echo '<a href="' . $beUrl . '">';
-            if ($this->config->logoType == 'text') {
-                if ($this->config->logoText) {
-                    echo $this->config->logoText;
-                }
-            } else {
-                echo '<img src="' . $this->config->logoImage . '">';
-            }
+            echo '<img src="' . $this->config->logo . '">';
             echo '</a>';
             echo '</div>';
             echo '</div>';

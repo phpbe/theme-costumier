@@ -18,14 +18,7 @@ class Menu
      *     values="return [1, 2, 3, 4]",
      *     driver="FormItemSelect")
      */
-    public int $quantity = 4;
+    public int $quantity = 2;
 
-    /**
-     * @BeConfigItem("所占列数",
-     *     description="底部默认有4列",
-     *     values="return [1, 2, 3, 4]",
-     *     driver="FormItemSelect")
-     */
-    public int $cols = 4;
 
 }

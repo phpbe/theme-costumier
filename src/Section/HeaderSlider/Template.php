@@ -77,11 +77,7 @@ class Template extends Section
         echo '.header-slider-image-with-text-overlay-image img,';
         echo '.header-slider-image-with-text-overlay-image-mobile img {';
         echo 'width: 100%;';
-        echo '}';
-
-        echo '.header-slider-image img,';
-        echo '.header-slider-image-with-text-overlay-image img {';
-        echo 'min-width: 1024px;';
+        echo 'display: block;';
         echo '}';
 
         // 未上传图像时的占位符
@@ -98,7 +94,6 @@ class Template extends Section
         echo 'text-shadow:  5px 5px 5px #999;';
         echo 'background-color: rgba(35, 35, 35, 0.2);';
         echo '}';
-
 
         echo '.header-slider-image-with-text-overlay-container {';
         echo 'position: relative;';
