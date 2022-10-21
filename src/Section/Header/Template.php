@@ -19,10 +19,9 @@ class Template extends Section
         echo 'z-index: 999;';
         echo 'background-color: var(--minor-color);';
         echo 'height: 95px;';
-        echo 'padding-left: 0;';
-        echo 'padding-right: 0;';
+        echo 'padding-left: 15px;';
+        echo 'padding-right: 15px;';
         echo '}';
-
 
         echo '.header-logo {';
         echo 'line-height: 95px;';
@@ -39,10 +38,6 @@ class Template extends Section
         echo '}';
 
         echo '.header-menu {';
-        echo 'height: 95px;';
-        echo 'line-height: 95px;';
-        echo 'position: relative;';
-        echo 'z-index: 100;';
         echo 'margin-left: 80px;';
         echo '}';
 
@@ -55,97 +50,177 @@ class Template extends Section
         echo 'list-style: none;';
         echo '}';
 
-        echo '.header-menu-lv1-item,';
-        echo '.header-menu-lv1-item-with-dropdown {';
+        echo '.header-menu-lv1-li {';
         echo 'display: inline-block;';
         echo 'padding: 0;';
-        echo 'margin: 0 2rem 0 0;';
         echo 'position: relative;';
         echo '}';
 
-        echo '.header-menu-lv1-item > a,';
-        echo '.header-menu-lv1-item-with-dropdown > a {';
+        echo '.header-menu-lv1-a {';
+        echo 'height: 95px;';
+        echo 'line-height: 95px;';
+        echo 'padding: 0 1rem;';
         echo 'color: #fff;';
         echo '}';
 
-        echo '.header-menu-lv1-item-active > a,';
-        echo '.header-menu-lv1-item-with-dropdown > a:hover,';
-        echo '.header-menu-lv1-item > a:hover {';
+        echo '.header-menu-lv1-li-active header-menu-lv1-a,';
+        echo '.header-menu-lv1-a:hover {';
         echo 'color: var(--major-color);';
         echo '}';
 
-        echo '.header-menu-lv1-item-with-dropdown:after {';
-        echo 'display: inline-block;';
-        echo 'margin-left: .35em;';
-        echo 'vertical-align: middle;';
-        echo 'content: "";';
-        echo 'border-top: .3em solid #999;';
-        echo 'border-left: .3em solid transparent;';
-        echo 'border-right: .3em solid transparent;';
-        echo 'border-bottom: 0;';
-        echo '}';
-
-        echo '.header-menu-lv2 {';
+        echo '.header-menu-lv2-ul {';
+        echo 'border-top: var(--major-color) 2px solid;';
         echo 'position: absolute;';
-        echo 'left: -.5rem;';
+        echo 'top: 95px;';
+        echo 'min-width: 250px;';
         echo 'background-color: #fff;';
-        echo 'min-width: 170px;';
-        echo 'line-height: 30px;';
-        echo 'box-shadow: 0 0 2px 1px #eee;';
-        echo 'z-index: 120;';
-        echo 'transition: transform 0.3s linear;';
-        echo 'transform: translateY(30px);';
-        echo 'visibility: hidden;';
+        echo 'opacity: 0;';
+        echo 'transition: all 0.5s ease;';
+        echo 'transform-origin: 0 0;';
+        echo 'transform: rotateX(-90deg)';
         echo '}';
 
-        echo '.header-menu-lv1-item-with-dropdown:hover .header-menu-lv2 {';
-        echo 'visibility: visible;';
-        echo 'transform: translateY(-1px)';
+        echo '.header-menu-lv1-li:hover .header-menu-lv2-ul {';
+        echo 'opacity: 1;';
+        echo 'transform: rotateX(0)';
         echo '}';
 
-        echo '.header-menu-lv2-item {';
-        echo 'padding: .2rem 2rem;';
+        echo '.header-menu-lv2-li {';
+        echo 'padding: 0 1.5rem;';
         echo '}';
 
-        echo '.header-menu-lv2-item-active, ';
-        echo '.header-menu-lv2-item:hover {';
+        echo '.header-menu-lv2-a {';
+        echo 'display: block;';
+        echo 'padding: 1rem 0;';
+        echo 'line-height: 1rem;';
+        echo 'border-bottom: #eee 1px solid;';
+        echo 'position: relative;';
+        echo '}';
+
+        echo '.header-menu-lv2-a:before {';
+        echo 'content: \'\';';
+        echo 'position: absolute;';
+        echo 'left: 0;';
+        echo 'right: 0;';
+        echo 'height: 1px;';
+        echo 'bottom: 0;';
+        echo 'background-color: var(--major-color);';
+        echo 'transition: all 0.5s ease;';
+        echo 'transform: scaleX(0);';
+        echo '}';
+
+        echo '.header-menu-lv2-a:hover:before {';
+        echo 'transform: scaleX(1);';
+        echo '}';
+
+        echo '.header-menu-lv2-li-active header-menu-lv2-a, ';
+        echo '.header-menu-lv2-a:hover {';
         echo 'color: var(--major-color);';
         echo '}';
 
-        echo '.header-menu-icon {';
+        echo '.header-icon {';
         echo 'height: 95px;';
         echo 'line-height: 95px;';
         echo 'font-size: 35px;';
         echo 'color: var(--major-color);';
         echo '}';
 
-        echo '.header-menu-icon-title {';
+        echo '.header-icon-title {';
         echo 'margin-top: 25px;';
         echo 'color: #eee;';
         echo 'padding-left: 15px;';
         echo 'font-size: .8rem;';
         echo '}';
 
-        echo '.header-menu-icon-content {';
+        echo '.header-icon-content {';
         echo 'margin-top: 5px;';
         echo 'font-weight: bold;';
         echo 'padding-left: 15px;';
         echo '}';
 
-        echo '.header-menu-icon-content a {';
+        echo '.header-icon-content a {';
         echo 'color: #fff;';
         echo '}';
 
-        echo '.header-menu-icon-content a:hover {';
+        echo '.header-icon-content a:hover {';
         echo 'color: var(--major-color);';
+        echo '}';
+
+        echo '.header-menu,';
+        echo '.header-icon,';
+        echo '.header-icon-body {';
+        echo 'display: none;';
+        echo '}';
+
+        echo '.header-toggle {';
+        echo 'display: block;';
+        echo 'height: 95px;';
+        echo 'line-height: 95px;';
+        echo 'color: #fff;';
+        echo 'cursor: pointer;';
+        echo '}';
+
+        echo '.header-toggle-icon,';
+        echo '.header-toggle-icon:before,';
+        echo '.header-toggle-icon:after {';
+        echo 'display: inline-block;';
+        echo 'width: 28px;';
+        echo 'height: 2px;';
+        echo 'background-color: #fff;';
+        echo 'transition: all 0.3s ease;';
+        echo '}';
+
+        echo '.header-toggle-icon {';
+        echo 'position: relative;';
+        echo '}';
+
+        echo '.header-toggle-icon:before,';
+        echo '.header-toggle-icon:after {';
+        echo 'position: absolute;';
+        echo 'left: 0;';
+        echo 'content: \'\';';
+        echo '}';
+
+        echo '.header-toggle-icon:before {';
+        echo 'top: -8px;';
+        echo '}';
+
+        echo '.header-toggle-icon:after {';
+        echo 'top: 8px;';
+        echo '}';
+
+        echo '.js-open-drawer-menu .header-toggle-icon {';
+        echo 'background-color: transparent;';
+        echo '}';
+
+        echo '.js-open-drawer-menu .header-toggle-icon:before {';
+        echo 'top: 0;';
+        echo 'transform: rotate3d(0, 0, 1, 45deg);';
+        echo '}';
+
+        echo '.js-open-drawer-menu .header-toggle-icon:after {';
+        echo 'top: 0;';
+        echo 'transform: rotate3d(0, 0, 1, -45deg);';
         echo '}';
 
         // 电脑端
         echo '@media (min-width: 1200px) {';
+
         echo '.header {';
         echo 'padding-left: 30px;';
         echo 'padding-right: 30px;';
         echo '}';
+
+        echo '.header-menu,';
+        echo '.header-icon-phone,';
+        echo '.header-icon-phone-body {';
+        echo 'display: block;';
+        echo '}';
+
+        echo '.header-toggle {';
+        echo 'display: none;';
+        echo '}';
+
         echo '}';
 
         echo '@media (min-width: 1560px) {';
@@ -153,6 +228,12 @@ class Template extends Section
         echo 'padding-left: 60px;';
         echo 'padding-right: 60px;';
         echo '}';
+
+        echo '.header-icon,';
+        echo '.header-icon-body {';
+        echo 'display: block;';
+        echo '}';
+
         echo '}';
 
 
@@ -181,7 +262,7 @@ class Template extends Section
 
             echo '<div class="be-col">';
             echo '<div class="header-menu">';
-            echo '<ul class="header-menu-lv1">';
+            echo '<ul class="header-menu-lv1-ul">';
             $menu = \Be\Be::getMenu('North');
             $menuTree = $menu->getTree();
             $menuActiveId = $menu->getActiveId();
@@ -207,14 +288,9 @@ class Template extends Section
                     }
                 }
 
-                echo '<li class="header-menu-lv1-item';
-
-                if ($hasSubItem) {
-                    echo '-with-dropdown';
-                }
-
+                echo '<li class="header-menu-lv1-li';
                 if ($active) {
-                    echo ' header-menu-lv1-item-active';
+                    echo ' header-menu-lv1-li-active';
                 }
                 echo '">';
 
@@ -235,18 +311,18 @@ class Template extends Section
                     }
                 }
 
-                echo '<a class="link-hover" href="' . $url . '"';
+                echo '<a class="header-menu-lv1-a" href="' . $url . '"';
                 if ($item->target === '_blank') {
                     echo 'target="_blank"';
                 }
                 echo '>' . $item->label . '</a>';
 
                 if ($hasSubItem) {
-                    echo '<ul class="header-menu-lv2">';
+                    echo '<ul class="header-menu-lv2-ul">';
                     foreach ($item->subItems as $subItem) {
-                        echo '<li class="header-menu-lv2-item';
+                        echo '<li class="header-menu-lv2-li';
                         if (isset($subItem->active) && $subItem->active) {
-                            echo 'header-menu-lv2-item-active';
+                            echo 'header-menu-lv2-li-active';
                         }
                         echo '">';
 
@@ -263,7 +339,7 @@ class Template extends Section
                             }
                         }
 
-                        echo '<a class="link-hover" href="' . $url . '"';
+                        echo '<a class="header-menu-lv2-a" href="' . $url . '"';
                         if ($subItem->target === '_blank') {
                             echo 'target="_blank"';
                         }
@@ -281,23 +357,33 @@ class Template extends Section
 
             if ($this->config->phone !== '') {
                 echo '<div class="be-col-auto">';
-                echo '<div class="header-menu-icon"><i class="bi-telephone"></i></div>';
+                echo '<div class="header-icon header-icon-phone"><i class="bi-telephone"></i></div>';
                 echo '</div>';
                 echo '<div class="be-col-auto">';
-                echo '<div class="header-menu-icon-title">' . $this->config->phoneTitle . '</div>';
-                echo '<div class="header-menu-icon-content"><a href="tel:' . $this->config->phone . '" class="be-c-fff">' . $this->config->phone . '</a></div>';
+                echo '<div class="header-icon-body header-icon-phone-body">';
+                echo '<div class="header-icon-title">' . $this->config->phoneTitle . '</div>';
+                echo '<div class="header-icon-content"><a href="tel:' . $this->config->phone . '" class="be-c-fff">' . $this->config->phone . '</a></div>';
+                echo '</div>';
                 echo '</div>';
             }
 
             if ($this->config->email !== '') {
                 echo '<div class="be-col-auto">';
-                echo '<div class="header-menu-icon be-pl-200"><i class="bi-envelope"></i></div>';
+                echo '<div class="header-icon be-pl-200"><i class="bi-envelope"></i></div>';
                 echo '</div>';
                 echo '<div class="be-col-auto">';
-                echo '<div class="header-menu-icon-title">' . $this->config->emailTitle . '</div>';
-                echo '<div class="header-menu-icon-content"><a href="mailto:' . $this->config->email . '" class="be-c-fff">' . $this->config->email . '</a></div>';
+                echo '<div class="header-icon-body">';
+                echo '<div class="header-icon-title">' . $this->config->emailTitle . '</div>';
+                echo '<div class="header-icon-content"><a href="mailto:' . $this->config->email . '" class="be-c-fff">' . $this->config->email . '</a></div>';
+                echo '</div>';
                 echo '</div>';
             }
+
+            echo '<div class="be-col-auto">';
+            echo '<div class="header-toggle" onclick="return DrawerMenu.toggle();">';
+            echo '<i class="header-toggle-icon"></i>';
+            echo '</div>';
+            echo '</div>';
 
             echo '</div>';
 

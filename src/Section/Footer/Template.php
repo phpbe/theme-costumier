@@ -256,14 +256,14 @@ class Template extends Section
                         echo '<div class="footer-item-body">';
 
                         if ($itemConfig->address !== '') {
-                            echo '<div class="be-row be-mb-100">';
+                            echo '<div class="be-row be-mb-200">';
                             echo '<div class="be-col-auto be-c-major"><i class="bi-pin-map-fill"></i></div>';
                             echo '<div class="be-col"><div class="be-pl-50 be-c-bbb">' . $itemConfig->address . '</div></div>';
                             echo '</div>';
                         }
 
                         if ($itemConfig->phone !== '') {
-                            echo '<div class="be-row be-mb-100">';
+                            echo '<div class="be-row be-mb-200">';
                             echo '<div class="be-col-auto be-c-major"><i class="bi-telephone"></i></div>';
                             echo '<div class="be-col"><div class="be-pl-50 be-c-bbb">' . $itemConfig->phone . '</div></div>';
                             echo '</div>';

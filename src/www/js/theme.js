@@ -25,7 +25,7 @@ $(document).ready(function () {
     let $gotoTop = $("#goto-top");
     let gotoTop = false;
     $(window).scroll(function(){
-        if($(this).scrollTop() >= 50){
+        if ($(this).scrollTop() >= 50){
             if (!gotoTop) {
                 gotoTop = true;
                 $gotoTop.fadeIn();

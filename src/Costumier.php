@@ -95,12 +95,6 @@
     <div id="overlay"></div>
 
     <div id="drawer-menu" class="drawer">
-        <div class="drawer-fixed-header">
-            <div class="drawer-header">
-                <div class="drawer-title">Navigation</div>
-                <button type="button" class="drawer-close" onclick="DrawerMenu.hide();"></button>
-            </div>
-        </div>
         <ul class="drawer-menu-lv1">
             <?php
             $menu = \Be\Be::getMenu('North');
@@ -133,9 +127,6 @@
 
                 if ($hasSubItem) {
                     echo '<div class="drawer-menu-lv1-dropdown">';
-                    echo '<div class="drawer-menu-lv1-dropdown-title">';
-                    echo $item->label;
-                    echo '</div>';
                     echo '<ul class="drawer-menu-lv2">';
                     foreach ($item->subItems as $subItem) {
                         $url = 'javascript:void(0);';

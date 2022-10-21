@@ -22,7 +22,7 @@ class Template extends Section
 
         if ($this->config->pagination) {
             echo '.swiper-pagination-bullet-active {';
-            echo 'background-color: ' . $configTheme->mainColor . ';';
+            echo 'background-color: ' . $configTheme->majorColor . ';';
             echo '}';
         }
 
@@ -164,12 +164,20 @@ class Template extends Section
         echo 'color: #333 !important;';
         echo '}';
 
+        $libCss = \Be\Be::getLib('Css');
+        $rgbMinorColor = $libCss->hexToRgb($configTheme->minorColor);
         echo '.header-float {';
         echo 'position: absolute;';
-        echo 'top: 50px;';
+        echo 'top: 0;';
         echo 'left: 0;';
         echo 'right: 0;';
-        echo 'opacity: 0.8;';
+        echo 'background-color:  rgb('. implode(' ', $rgbMinorColor).' / 85%);';
+        echo '}';
+
+        echo '@media (min-width: 1200px) {';
+        echo '.header-float {';
+        echo 'top: 50px;';
+        echo '}';
         echo '}';
 
         echo '.header-fixed {';
@@ -177,7 +185,7 @@ class Template extends Section
         echo 'top: 0;';
         echo 'left: 0;';
         echo 'right: 0;';
-        echo 'opacity: 1;';
+        echo 'background-color: var(--minor-color);';
         echo '}';
 
         echo '</style>';
