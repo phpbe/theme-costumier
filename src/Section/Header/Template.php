@@ -77,7 +77,8 @@ class Template extends Section
         echo 'opacity: 0;';
         echo 'transition: all 0.5s ease;';
         echo 'transform-origin: 0 0;';
-        echo 'transform: rotateX(-90deg)';
+        echo 'transform: rotateX(-90deg);';
+        echo 'padding: .25rem 0 !important;';
         echo '}';
 
         echo '.header-menu-lv1-li:hover .header-menu-lv2-ul {';
@@ -105,7 +106,7 @@ class Template extends Section
         echo 'height: 1px;';
         echo 'bottom: 0;';
         echo 'background-color: var(--major-color);';
-        echo 'transition: all 0.5s ease;';
+        echo 'transition: all 0.3s linear;';
         echo 'transform: scaleX(0);';
         echo '}';
 

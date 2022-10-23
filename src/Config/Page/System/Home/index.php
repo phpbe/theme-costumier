@@ -10,6 +10,9 @@ class index
         [
             'name' => 'Theme.Costumier.HeaderSlider',
         ],
+        [
+            'name' => 'Theme.Costumier.Feature123',
+        ],
     ];
 
     /**
