@@ -119,7 +119,7 @@ class Template extends Section
 
 
         echo '#' . $this->id . ' .production-item-link {';
-        echo 'margin-top: 1rem;';
+        echo 'margin-top: 1.5rem;';
         echo '}';
 
         echo '#' . $this->id . ' .production-item-link a {';
@@ -136,7 +136,7 @@ class Template extends Section
         echo '}';
 
         echo '#' . $this->id . ' .production-items-container {';
-        echo 'padding: 1.5rem;';
+        echo 'padding: 2rem;';
         echo '}';
 
         echo '}';
@@ -152,7 +152,7 @@ class Template extends Section
         echo '}';
 
         echo '#' . $this->id . ' .production-items-container {';
-        echo 'padding: 2rem;';
+        echo 'padding: 3rem;';
         echo '}';
 
         echo '}';
@@ -212,7 +212,7 @@ class Template extends Section
 
                                 echo '</div>';
 
-                                echo '<div class="be-mt-100 be-c-777 be-lh-150">';
+                                echo '<div class="be-mt-150 be-c-777 be-lh-150">';
                                 echo $itemConfig->description;
                                 echo '</div>';
 
