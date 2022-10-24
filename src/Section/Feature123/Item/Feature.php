@@ -15,22 +15,22 @@ class Feature
 
     /**
      * @BeConfigItem("图标",
-     *     description = "bi图标名（例：bi-facebook）或 svg 图像源码",
-     *     driver = "FormItemInput"
+     *     description = "bi图标名（图标库：https://www.phpbe.com/ui/icons）或 svg 图像源码",
+     *     driver = "FormItemInputTextArea"
      * )
      */
     public string $icon = '';
 
     /**
      * @BeConfigItem("标题",
-     *     driver = "FormItemInput"
+     *     driver = "FormItemInputTextArea"
      * )
      */
     public string $title = '';
 
     /**
      * @BeConfigItem("描述",
-     *     driver = "FormItemInput"
+     *     driver = "FormItemInputTextArea"
      * )
      */
     public string $description = '';

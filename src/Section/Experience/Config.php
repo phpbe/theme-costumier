@@ -22,14 +22,14 @@ class Config
 
     /**
      * @BeConfigItem("杯签大头",
-     *     driver="FormItemStorageImage"
+     *     driver="FormItemInput"
      * )
      */
     public string $tagHead = '25+';
 
     /**
      * @BeConfigItem("杯签内容",
-     *     driver="FormItemStorageImage"
+     *     driver="FormItemInput"
      * )
      */
     public string $tag = 'Year experience in Fabiflex';
@@ -51,8 +51,8 @@ class Config
 
     /**
      * @BeConfigItem("图标",
-     *     description = "bi图标名 或 svg 图像源码",
-     *     driver="FormItemInput"
+     *     description = "bi图标名（图标库：https://www.phpbe.com/ui/icons）或 svg 图像源码",
+     *     driver="FormItemInputTextArea"
      * )
      */
     public string $icon = 'bi-shield-check';
@@ -60,7 +60,7 @@ class Config
     /**
      * @BeConfigItem("图标标题",
      *     description = "支持 span 标记，标记的文字将附加个性化下划线",
-     *     driver="FormItemStorageImage"
+     *     driver="FormItemInputTextArea"
      * )
      */
     public string $iconTitle = 'We’re in this business <span>Since 1987</span> and we provide the best service';
@@ -74,17 +74,11 @@ class Config
 
     /**
      * @BeConfigItem("列表项目",
-     *     driver = "FormItemTinymce"
+     *     driver = "FormItemTinymce",
+     *     layout = "basic"
      * )
      */
     public string $lis = '<ul><li>It can be very well produced using fiber, yarn, texture, or mix.</li><li>It is one of the most extensive terms applied to the clothing industry.</li><li>It might be a finished or unfinished item. It has no particular use.</li></ul>';
-
-    /**
-     * @BeConfigItem("背景颜色",
-     *     driver="FormItemColorPicker"
-     * )
-     */
-    public string $backgroundColor = '#fff';
 
     /**
      * @BeConfigItem("背景图像（左）",
