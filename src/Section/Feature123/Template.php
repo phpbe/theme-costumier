@@ -169,7 +169,6 @@ class Template extends Section
                         }
                         echo '</div>';
 
-
                         $i++;
                     }
                 }

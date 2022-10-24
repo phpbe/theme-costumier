@@ -42,11 +42,11 @@ class Template extends Section
         echo 'width: 6rem;';
         echo 'height: 6rem;';
         echo 'line-height: 6rem;';
-        echo 'box-shadow: 0px 0px 7px 0px #ddd;';
+        echo 'box-shadow: 0px 0px 7px 0px #eee;';
         echo 'transition: all .5s ease;';
         echo '}';
 
-        echo '#' . $this->id . ' .working-process-item-icon-box:after {';
+        echo '#' . $this->id . ' .working-process-item-index {';
         echo 'position: absolute;';
         echo 'counter-increment: section;';
         echo 'content: counter(section,decimal-leading-zero);';
@@ -57,13 +57,19 @@ class Template extends Section
         echo 'border-radius: 50%;';
         echo 'background-color: var(--minor-color);';
         echo 'color: #fff;';
+        echo 'font-family: "Rajdhani";';
         echo 'font-size: 1rem;';
         echo 'line-height: 2rem;';
         echo 'text-align: center;';
+        echo 'transition: all .5s ease;';
         echo '}';
 
         echo '#' . $this->id . ' .working-process-item:hover .working-process-item-icon-box {';
         echo 'transform: translateY(-10px);';
+        echo '}';
+
+        echo '#' . $this->id . ' .working-process-item:hover .working-process-item-index {';
+        echo 'background-color: var(--major-color);';
         echo '}';
 
         echo '#' . $this->id . ' .working-process-item-icon-box i,';
@@ -145,6 +151,7 @@ class Template extends Section
             echo '<div class="working-process-items">';
 
             if (isset($this->config->items) && is_array($this->config->items) && count($this->config->items) > 0) {
+                $i = 1;
                 foreach ($this->config->items as $item) {
                     $itemConfig = $item['config'];
                     if ($itemConfig->enable) {
@@ -160,6 +167,7 @@ class Template extends Section
                                 } elseif (substr($itemConfig->icon, 0, 5) === '<svg ') {
                                     echo $itemConfig->icon;
                                 }
+                                echo '<div class="working-process-item-index">' . ($i < 10 ? ('0' . $i) : $i) . '</div>';
                                 echo '</div>';
                                 echo '</div>';
 
@@ -173,6 +181,8 @@ class Template extends Section
                         }
                         echo '</div>';
                     }
+
+                    $i++;
                 }
             }
 
