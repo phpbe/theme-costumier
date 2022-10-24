@@ -110,6 +110,8 @@ class Config
 
     public function __construct()
     {
+        $wwwUrl = \Be\Be::getProperty('Theme.Costumier')->getWwwUrl();
+
         $this->items = [
             [
                 'name' => 'Production',
@@ -175,7 +177,7 @@ class Config
                 'name' => 'RichText',
                 'config' => (object)[
                     'enable' => 1,
-                    'content' => '<p class="be-ta-center be-c-major"><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-fill"></i></p><p class="be-ta-center">Rated <span class="be-c-major">4.7</span> out of 5 based on over <span class="be-c-major">1000 +</span> Reviews</p>',
+                    'content' => '<p class="be-ta-center"><img src="'.$wwwUrl . '/images/logo.svg" alt="" style="max-width: 120px;"></p><p class="be-ta-center be-c-major"><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-fill"></i></p><p class="be-ta-center">Rated <span class="be-c-major">4.7</span> out of 5 based on over <span class="be-c-major">1000 +</span> Reviews</p>',
                 ],
             ],
         ];
