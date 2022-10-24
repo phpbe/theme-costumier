@@ -60,11 +60,6 @@ class Template extends Section
         echo 'font-family: "Rajdhani";';
         echo '}';
 
-        echo '.feature123-item-description {';
-        echo 'color: #999;';
-        echo 'line-height: 1.5;';
-        echo '}';
-
         echo '.feature123-item-index {';
         echo 'font-size: 4rem;';
         echo 'line-height: 1;';
@@ -158,7 +153,7 @@ class Template extends Section
 
                                 echo '<div class="be-row be-mt-300">';
                                 echo '<div class="be-col">';
-                                echo '<div class="feature123-item-description">';
+                                echo '<div class="be-c-777 be-lh-150">';
                                 echo $itemConfig->description;
                                 echo '</div>';
                                 echo '</div>';
