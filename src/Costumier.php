@@ -60,7 +60,7 @@
     <link rel="stylesheet" href="<?php echo $wwwUrl; ?>/css/drawer.css" />
     <script src="<?php echo $wwwUrl; ?>/js/drawer-menu.js"></script>
 
-    <link rel="stylesheet" href="<?php echo $wwwUrl; ?>/css/theme.css" />
+    <link rel="stylesheet" href="<?php echo $wwwUrl; ?>/css/theme.css?v=20221024" />
     <script src="<?php echo $wwwUrl; ?>/js/theme.js"></script>
 
     <be-head>
