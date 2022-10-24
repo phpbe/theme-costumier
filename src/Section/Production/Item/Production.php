@@ -1,5 +1,5 @@
 <?php
-namespace Be\Theme\Costumier\Section\Feature123\Item;
+namespace Be\Theme\Costumier\Section\Production\Item;
 
 /**
  * @BeConfig("服务&产品", icon="bi-app")
