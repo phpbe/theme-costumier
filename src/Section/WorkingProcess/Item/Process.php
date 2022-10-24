@@ -1,5 +1,5 @@
 <?php
-namespace Be\Theme\Costumier\Section\Production\Item;
+namespace Be\Theme\Costumier\Section\WorkingProcess\Item;
 
 /**
  * @BeConfig("流程", icon="bi-app")
