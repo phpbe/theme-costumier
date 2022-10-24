@@ -101,6 +101,7 @@ class Config
      *     driver = "FormItemsConfigs",
      *     items = "return [
      *          \Be\Theme\Costumier\Section\Production\Item\Production::class,
+     *          \Be\Theme\Costumier\Section\Production\Item\RichText::class,
      *     ]"
      * )
      */
@@ -171,18 +172,17 @@ class Config
                 ],
             ],
             [
-                'name' => 'Production',
+                'name' => 'RichText',
                 'config' => (object)[
                     'enable' => 1,
-                    'icon' => 'bi-flower3',
-                    'title' => 'Fabric Design',
-                    'subTitle' => 'Manufacture',
-                    'description' => 'It is the process of transfer dyes from the aqueous solution to the fiber surface',
-                    'link' => '#',
-                    'linkText' => 'READ MORE <i class="bi-plus"></i>',
+                    'content' => '<p class="be-ta-center be-c-major"><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-fill"></i></p><p class="be-ta-center">Rated <span class="be-c-major">4.7</span> out of 5 based on over <span class="be-c-major">1000 +</span> Reviews</p>',
                 ],
             ],
         ];
     }
+
+
+
+
 
 }

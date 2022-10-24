@@ -39,6 +39,7 @@ class Template extends Section
 
         echo '#' . $this->id . ' .production-item-box {';
         echo 'border: 1px solid #e5e4e2;';
+        echo 'height: 100%;';
         echo 'padding: 2rem;';
         echo 'background-color: ' . $this->config->itemBackgroundColor . ';';
         echo 'position: relative;';
@@ -187,9 +188,9 @@ class Template extends Section
                     $itemConfig = $item['config'];
                     if ($itemConfig->enable) {
                         echo '<div class="production-item">';
+                        echo '<div class="production-item-box">';
                         switch ($item['name']) {
                             case 'Production':
-                                echo '<div class="production-item-box">';
 
                                 echo '<div class="be-row">';
 
@@ -223,9 +224,12 @@ class Template extends Section
                                     echo '</div>';
                                 }
 
-                                echo '</div>';
+                                break;
+                            case 'RichText':
+                                echo $itemConfig->content;
                                 break;
                         }
+                        echo '</div>';
                         echo '</div>';
                     }
                 }
