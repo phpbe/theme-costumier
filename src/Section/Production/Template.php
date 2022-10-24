@@ -59,24 +59,48 @@ class Template extends Section
         echo 'transition: all .7s ease;';
         echo '}';
 
+        echo '#' . $this->id . ' .production-item:hover .production-item-box:after {';
+        echo 'border-width: 20px 20px 0px 0;';
+        echo '}';
+
         echo '#' . $this->id . ' .production-item-icon {';
         echo 'margin-right: 1rem;';
         echo 'padding: .75rem 1.25rem;';
         echo 'background-color: #fff;';
-        echo 'border-left: var(--major-color) 3px solid;';
+        echo 'position: relative;';
+        echo '}';
+
+        echo '#' . $this->id . ' .production-item-icon:before {';
+        echo 'content: "";';
+        echo 'display: inline-block;';
+        echo 'position: absolute;';
+        echo 'left: 0;';
+        echo 'top: 0;';
+        echo 'width: 3px;';
+        echo 'height: 4.5rem;';
+        echo 'background-color: var(--major-color);';
+        echo 'transition: all .7s ease;';
+        echo 'z-index: 1;';
+        echo '}';
+
+        echo '#' . $this->id . ' .production-item:hover .production-item-icon:before {';
+        echo 'width: 5.5rem;';
         echo '}';
 
         echo '#' . $this->id . ' .production-item-icon i,';
         echo '#' . $this->id . ' .production-item-icon svg {';
         echo 'display: inline-block;';
+        echo 'position: relative;';
         echo 'font-size: 3rem;';
+        echo 'line-height: 1;';
         echo 'color: var(--major-color);';
         echo 'transition: all 1s ease;';
+        echo 'z-index: 2;';
         echo '}';
 
-        echo '#' . $this->id . ' .production-item:hover .feature123-item-icon i,';
-        echo '#' . $this->id . ' .production-item:hover .feature123-item-icon svg {';
-        echo 'transform: rotateY(360deg);';
+        echo '#' . $this->id . ' .production-item:hover .production-item-icon i,';
+        echo '#' . $this->id . ' .production-item:hover .production-item-icon svg {';
+        echo 'color: #fff;';
         echo '}';
 
         echo '#' . $this->id . ' .production-item-title {';
@@ -101,7 +125,6 @@ class Template extends Section
         echo 'font-family: "Rajdhani";';
         echo 'color: var(--major-color);';
         echo '}';
-
 
 
 
