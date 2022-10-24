@@ -13,6 +13,9 @@ class index
         [
             'name' => 'Theme.Costumier.Feature123',
         ],
+        [
+            'name' => 'Theme.Costumier.Experience',
+        ],
     ];
 
     /**

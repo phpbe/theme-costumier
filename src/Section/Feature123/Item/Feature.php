@@ -15,7 +15,7 @@ class Feature
 
     /**
      * @BeConfigItem("图标",
-     *     description = "bi图标名（例：bi-facebook）或 svg 图像源码"
+     *     description = "bi图标名（例：bi-facebook）或 svg 图像源码",
      *     driver = "FormItemInput"
      * )
      */

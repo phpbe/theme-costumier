@@ -7,7 +7,7 @@ use Be\Theme\Section;
 
 class Template extends Section
 {
-    public array $positions = ['north'];
+    public array $positions = ['middle'];
 
     private function css()
     {

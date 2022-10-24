@@ -39,6 +39,10 @@ class Template extends Section
         echo 'color: #eee;';
         echo '}';
 
+        echo '.header-tips p {';
+        echo 'margin: 0;';
+        echo '}';
+
         echo '.header-tips-social-icons {';
         echo 'padding-left: 30px;';
         echo '}';

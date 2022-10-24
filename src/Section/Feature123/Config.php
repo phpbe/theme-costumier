@@ -2,7 +2,7 @@
 namespace Be\Theme\Costumier\Section\Feature123;
 
 /**
- * @BeConfig("特色123", ordering="2", icon="bi-123")
+ * @BeConfig("特色123", ordering="1", icon="bi-123")
  */
 class Config
 {
@@ -15,7 +15,7 @@ class Config
 
     /**
      * @BeConfigItem("标题",
-     *     driver="FormItemStorageImage"
+     *     driver="FormItemInput"
      * )
      */
     public string $title = 'WE GIVE TOP PRODUCTION FROM EVERY ANGLE.';
