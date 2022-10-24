@@ -2,7 +2,7 @@
 namespace Be\Theme\Costumier\Section\Experience;
 
 /**
- * @BeConfig("经验", ordering="2", icon="bi-stack-overflow")
+ * @BeConfig("经验", ordering="3", icon="bi-stack-overflow")
  */
 class Config
 {

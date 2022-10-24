@@ -73,7 +73,19 @@ class Template extends Section
         echo 'color: var(--major-color);';
         echo '}';
 
-        // 电脑端
+
+
+
+        echo '@media (min-width: 1024px) {';
+
+        echo '#' . $this->id . ' .feature123-title {';
+        echo 'font-size: 2.5rem;';
+        echo '}';
+
+        echo '}';
+
+
+
         echo '@media (min-width: 1200px) {';
         echo '.feature123-items {';
         echo 'display: flex;';
@@ -86,17 +98,6 @@ class Template extends Section
         echo '}';
 
 
-        echo '@media (min-width: 1024px) {';
-
-        echo '#' . $this->id . ' .feature123-title {';
-        echo 'font-size: 2.5rem;';
-        echo '}';
-
-        echo '}';
-
-        echo '@media (min-width: 1200px) {';
-
-        echo '}';
 
         echo '@media (min-width: 1560px) {';
 

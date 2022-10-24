@@ -1,8 +1,8 @@
 <?php
-namespace Be\Theme\Costumier\Section\Feature123;
+namespace Be\Theme\Costumier\Section\WorkingProcess;
 
 /**
- * @BeConfig("特色123", ordering="2", icon="bi-123")
+ * @BeConfig("工作流程", ordering="5", icon="bi-arrow-right-square")
  */
 class Config
 {
@@ -18,21 +18,7 @@ class Config
      *     driver="FormItemInput"
      * )
      */
-    public string $title = 'WE GIVE TOP PRODUCTION FROM EVERY ANGLE.';
-
-    /**
-     * @BeConfigItem("背景颜色",
-     *     driver="FormItemColorPicker"
-     * )
-     */
-    public string $backgroundColor = '#fff';
-
-    /**
-     * @BeConfigItem("子项背景颜色",
-     *     driver="FormItemColorPicker"
-     * )
-     */
-    public string $itemBackgroundColor = '#f8fafb';
+    public string $title = 'OUR WORKING PROCESS!';
 
     /**
      * @BeConfigItem("内边距 （手机端）",
@@ -86,7 +72,7 @@ class Config
      * @BeConfigItem("子项",
      *     driver = "FormItemsConfigs",
      *     items = "return [
-     *          \Be\Theme\Costumier\Section\Feature123\Item\Feature::class,
+     *          \Be\Theme\Costumier\Section\WorkingProcess\Item\Process::class,
      *     ]"
      * )
      */
@@ -97,33 +83,46 @@ class Config
     {
         $this->items = [
             [
-                'name' => 'Feature',
+                'name' => 'Process',
                 'config' => (object)[
                     'enable' => 1,
                     'icon' => 'bi-border-all',
-                    'title' => 'Choose For Many Fabrics and Textiles materials for your production',
-                    'description' => 'We classified it on the basis of material, design and by craft.',
+                    'title' => 'Production of Fabric',
+                    'description' => 'Most fabrics are presently produced by interlacing.',
                 ],
             ],
             [
-                'name' => 'Feature',
+                'name' => 'Process',
                 'config' => (object)[
                     'enable' => 1,
-                    'icon' => 'bi-bricks',
-                    'title' => 'Create Your Design Only for the Fabric Production and Natural Fabrics',
-                    'description' => 'With its rapid growth over the last four decades, since 1970',
+                    'icon' => 'bi-puzzle',
+                    'title' => 'Exportation Globally',
+                    'description' => 'Global exports is trade whereby goods and services.',
                 ],
             ],
             [
-                'name' => 'Feature',
+                'name' => 'Process',
                 'config' => (object)[
                     'enable' => 1,
-                    'icon' => 'bi-bounding-box',
-                    'title' => 'Shoose from various fabric types that are stretchy and comfortable.',
-                    'description' => 'Fabiflex is a leading export textile service globally.',
+                    'icon' => 'bi-slack',
+                    'title' => 'Digital Shop Available',
+                    'description' => 'It manages business inventory and transactions via internet.',
+                ],
+            ],
+            [
+                'name' => 'Process',
+                'config' => (object)[
+                    'enable' => 1,
+                    'icon' => 'bi-flower1',
+                    'title' => 'Great Client Support',
+                    'description' => 'Customer services to assist in making cost effective.',
                 ],
             ],
         ];
     }
+
+
+
+
 
 }

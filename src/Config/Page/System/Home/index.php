@@ -19,6 +19,9 @@ class index
         [
             'name' => 'Theme.Costumier.Production',
         ],
+        [
+            'name' => 'Theme.Costumier.WorkingProcess',
+        ],
     ];
 
     /**

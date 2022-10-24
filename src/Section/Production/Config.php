@@ -2,7 +2,7 @@
 namespace Be\Theme\Costumier\Section\Production;
 
 /**
- * @BeConfig("服务&产品", ordering="3", icon="bi-grid-3x2-gap")
+ * @BeConfig("服务&产品", ordering="4", icon="bi-grid-3x2-gap")
  */
 class Config
 {
