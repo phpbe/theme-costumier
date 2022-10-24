@@ -145,6 +145,7 @@ class Template extends Section
         echo '.header-slider-image-with-text-overlay-title {';
         echo 'text-align: center;';
         echo 'margin-bottom: 10px;';
+        echo 'font-family: "Rajdhani";';
         echo '}';
 
         echo '.header-slider-image-with-text-overlay-description {';
@@ -158,6 +159,7 @@ class Template extends Section
 
         echo '.header-slider-image-with-text-overlay-button .be-btn {';
         echo 'background-color: transparent;';
+        echo 'font-family: "Rajdhani";';
         echo '}';
 
         echo '.header-slider-image-with-text-overlay-button .be-btn:hover {';
