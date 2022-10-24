@@ -21,13 +21,6 @@ class Config
     public string $title = 'WE GIVE TOP PRODUCTION FROM EVERY ANGLE.';
 
     /**
-     * @BeConfigItem("描述",
-     *     driver = "FormItemInputTextArea"
-     * )
-     */
-    public string $description = '';
-
-    /**
      * @BeConfigItem("背景颜色",
      *     driver="FormItemColorPicker"
      * )

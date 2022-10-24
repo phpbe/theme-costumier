@@ -122,20 +122,13 @@ class Template extends Section
             echo '<div class="feature123">';
             echo '<div class="be-container">';
 
-            if ($this->config->title !== '' || $this->config->description !== '') {
+            if ($this->config->title !== '') {
                 echo '<div class="be-row">';
                 echo '<div class="be-col-0 be-md-col-4 be-xl-col-6"></div>';
                 echo '<div class="be-col-24 be-md-col-16 be-xl-col-12 be-ta-center">';
-                if ($this->config->title !== '') {
-                    echo '<h2 class="feature123-title">';
-                    echo $this->config->title;
-                    echo '</h2>';
-                }
-                if ($this->config->description !== '') {
-                    echo '<div class="be-mt-100 be-c-666">';
-                    echo $this->config->description;
-                    echo '</div>';
-                }
+                echo '<h2 class="feature123-title">';
+                echo $this->config->title;
+                echo '</h2>';
                 echo '</div>';
                 echo '<div class="be-col-0 be-md-col-4 be-xl-col-6"></div>';
                 echo '</div>';
