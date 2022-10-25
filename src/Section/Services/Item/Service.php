@@ -47,7 +47,7 @@ class Service
      *     driver = "FormItemInput"
      * )
      */
-    public string $link = '';
+    public string $link = '#';
 
     /**
      * @BeConfigItem("链接文字",

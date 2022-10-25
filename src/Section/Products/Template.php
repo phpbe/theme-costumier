@@ -100,7 +100,7 @@ class Template extends Section
         echo '}';
 
 
-        echo '@media (min-width: 1920px) {';
+        echo '@media (min-width: 2048px) {';
         echo '#' . $this->id . ' .products {';
         echo 'width: 1920px;';
         echo 'margin: 0 auto;';

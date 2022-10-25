@@ -17,7 +17,7 @@ class Config
      * @BeConfigItem("自动播放",
      *     driver = "FormItemSwitch")
      */
-    public int $autoplay = 0;
+    public int $autoplay = 1;
 
     /**
      * @BeConfigItem("自动播放间隔（毫秒）",
