@@ -2,7 +2,7 @@
 namespace Be\Theme\Costumier\Section\Faq;
 
 /**
- * @BeConfig("常见问题", ordering="6", icon="bi-question-square")
+ * @BeConfig("常见问题", ordering="7", icon="bi-question-square")
  */
 class Config
 {

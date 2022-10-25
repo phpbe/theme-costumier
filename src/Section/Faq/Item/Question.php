@@ -1,5 +1,5 @@
 <?php
-namespace Be\Theme\Costumier\Section\Products\Item;
+namespace Be\Theme\Costumier\Section\Faq\Item;
 
 /**
  * @BeConfig("问题", icon="bi-question-diamond")
