@@ -11,16 +11,19 @@ class index
             'name' => 'Theme.Costumier.HeaderSlider',
         ],
         [
-            'name' => 'Theme.Costumier.Feature123',
+            'name' => 'Theme.Costumier.Features',
         ],
         [
             'name' => 'Theme.Costumier.Experience',
         ],
         [
-            'name' => 'Theme.Costumier.Production',
+            'name' => 'Theme.Costumier.Services',
         ],
         [
             'name' => 'Theme.Costumier.WorkingProcess',
+        ],
+        [
+            'name' => 'Theme.Costumier.Products',
         ],
     ];
 

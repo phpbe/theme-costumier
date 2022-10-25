@@ -1,8 +1,8 @@
 <?php
-namespace Be\Theme\Costumier\Section\Production\Item;
+namespace Be\Theme\Costumier\Section\Services\Item;
 
 /**
- * @BeConfig("富文本", icon="bi-filter-square")
+ * @BeConfig("富文本", icon="bi-card-heading")
  */
 class RichText
 {

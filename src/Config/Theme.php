@@ -35,18 +35,18 @@ class Theme
      * @BeConfigItem("字体颜色",
      *     driver="FormItemColorPicker")
      */
-    public string $fontColor = '#333333';
+    public string $fontColor = '#333';
 
     /**
      * @BeConfigItem("超链接颜色",
      *     driver="FormItemColorPicker")
      */
-    public string $linkColor = '#333333';
+    public string $linkColor = '#333';
 
     /**
      * @BeConfigItem("超链接悬停颜色",
      *     driver="FormItemColorPicker")
      */
-    public string $linkHoverColor = '#FF6600';
+    public string $linkHoverColor = '#eb4438';
 
 }

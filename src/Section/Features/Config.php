@@ -1,8 +1,8 @@
 <?php
-namespace Be\Theme\Costumier\Section\Feature123;
+namespace Be\Theme\Costumier\Section\Features;
 
 /**
- * @BeConfig("特色123", ordering="2", icon="bi-123")
+ * @BeConfig("特色", ordering="2", icon="bi-123")
  */
 class Config
 {
@@ -86,7 +86,7 @@ class Config
      * @BeConfigItem("子项",
      *     driver = "FormItemsConfigs",
      *     items = "return [
-     *          \Be\Theme\Costumier\Section\Feature123\Item\Feature::class,
+     *          \Be\Theme\Costumier\Section\Features\Item\Feature::class,
      *     ]"
      * )
      */

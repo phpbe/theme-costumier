@@ -1,6 +1,6 @@
 <?php
 
-namespace Be\Theme\Costumier\Section\Feature123;
+namespace Be\Theme\Costumier\Section\Features;
 
 use Be\Be;
 use Be\Theme\Section;
@@ -12,16 +12,16 @@ class Template extends Section
     private function css()
     {
         echo '<style type="text/css">';
-        echo $this->getCssBackgroundColor('feature123');
-        echo $this->getCssPadding('feature123');
-        echo $this->getCssMargin('feature123');
+        echo $this->getCssBackgroundColor('features');
+        echo $this->getCssPadding('features');
+        echo $this->getCssMargin('features');
 
-        echo '#' . $this->id . ' .feature123 {';
+        echo '#' . $this->id . ' .feature {';
 
         echo '}';
 
 
-        echo '#' . $this->id . ' .feature123-title {';
+        echo '#' . $this->id . ' .features-title {';
         echo 'font-size: 2rem;';
         echo 'font-weight: 700;';
         echo 'font-family: "Rajdhani";';
@@ -31,27 +31,27 @@ class Template extends Section
         echo 'margin: 0;';
         echo '}';
 
-        echo '.feature123-items {';
+        echo '.features-items {';
         echo '}';
 
-        echo '.feature123-item {';
+        echo '.features-item {';
         echo 'background-color: ' . $this->config->itemBackgroundColor . ';';
         echo '}';
 
-        echo '.feature123-item-icon i,';
-        echo '.feature123-item-icon svg {';
+        echo '.features-item-icon i,';
+        echo '.features-item-icon svg {';
         echo 'display: inline-block;';
         echo 'font-size: 4rem;';
         echo 'color: var(--major-color);';
         echo 'transition: all 1s ease;';
         echo '}';
 
-        echo '.feature123-item:hover .feature123-item-icon i,';
-        echo '.feature123-item:hover .feature123-item-icon svg {';
+        echo '.features-item:hover .features-item-icon i,';
+        echo '.features-item:hover .features-item-icon svg {';
         echo 'transform: rotateY(360deg);';
         echo '}';
 
-        echo '.feature123-item-title {';
+        echo '.features-item-title {';
         echo 'margin-top: 1.5rem;';
         echo 'padding-top: 1.5rem;';
         echo 'border-top: #eee 1px solid;';
@@ -60,7 +60,7 @@ class Template extends Section
         echo 'font-family: "Rajdhani";';
         echo '}';
 
-        echo '.feature123-item-index {';
+        echo '.features-item-index {';
         echo 'font-size: 4rem;';
         echo 'line-height: 1;';
         echo 'color: var(--major-color-8);';
@@ -69,7 +69,7 @@ class Template extends Section
         echo 'transition: all .6s ease-in-out;';
         echo '}';
 
-        echo '.feature123-item:hover .feature123-item-index {';
+        echo '.features-item:hover .features-item-index {';
         echo 'color: var(--major-color);';
         echo '}';
 
@@ -78,7 +78,7 @@ class Template extends Section
 
         echo '@media (min-width: 1024px) {';
 
-        echo '#' . $this->id . ' .feature123-title {';
+        echo '#' . $this->id . ' .features-title {';
         echo 'font-size: 2.5rem;';
         echo '}';
 
@@ -87,12 +87,12 @@ class Template extends Section
 
 
         echo '@media (min-width: 1200px) {';
-        echo '.feature123-items {';
+        echo '.features-items {';
         echo 'display: flex;';
         echo 'justify-content: space-between;';
         echo '}';
 
-        echo '.feature123-item {';
+        echo '.features-item {';
         echo 'width: calc((100% - 4rem) / 3);';
         echo '}';
         echo '}';
@@ -101,7 +101,7 @@ class Template extends Section
 
         echo '@media (min-width: 1560px) {';
 
-        echo '#' . $this->id . ' .feature123-title {';
+        echo '#' . $this->id . ' .features-title {';
         echo 'font-size: 3rem;';
         echo '}';
 
@@ -115,14 +115,14 @@ class Template extends Section
     {
         if ($this->config->enable) {
             $this->css();
-            echo '<div class="feature123">';
+            echo '<div class="features">';
             echo '<div class="be-container">';
 
             if ($this->config->title !== '') {
                 echo '<div class="be-row">';
                 echo '<div class="be-col-0 be-md-col-4 be-xl-col-6"></div>';
                 echo '<div class="be-col-24 be-md-col-16 be-xl-col-12 be-ta-center">';
-                echo '<h2 class="feature123-title">';
+                echo '<h2 class="features-title">';
                 echo $this->config->title;
                 echo '</h2>';
                 echo '</div>';
@@ -131,17 +131,17 @@ class Template extends Section
             }
 
             echo '<div class="be-mt-100">';
-            echo '<div class="feature123-items">';
+            echo '<div class="features-items">';
             if (isset($this->config->items) && is_array($this->config->items) && count($this->config->items) > 0) {
                 $i = 1;
                 foreach ($this->config->items as $item) {
                     $itemConfig = $item['config'];
                     if ($itemConfig->enable) {
-                        echo '<div class="feature123-item be-mt-100">';
+                        echo '<div class="features-item be-mt-100">';
                         switch ($item['name']) {
                             case 'Feature':
                                 echo '<div class="be-px-150 be-py-200">';
-                                echo '<div class="feature123-item-icon">';
+                                echo '<div class="features-item-icon">';
                                 $itemConfig->icon = strtolower(trim($itemConfig->icon));
                                 if (substr($itemConfig->icon, 0, 3) === 'bi-') {
                                     echo '<i class="' . $itemConfig->icon . '"></i>';
@@ -150,7 +150,7 @@ class Template extends Section
                                 }
                                 echo '</div>';
 
-                                echo '<div class="feature123-item-title">' . $itemConfig->title . '</div>';
+                                echo '<div class="features-item-title">' . $itemConfig->title . '</div>';
 
                                 echo '<div class="be-row be-mt-300">';
                                 echo '<div class="be-col">';
@@ -160,7 +160,7 @@ class Template extends Section
                                 echo '</div>';
 
                                 echo '<div class="be-col-auto">';
-                                echo '<div class="feature123-item-index">' . ($i < 10 ? ('0' . $i) : $i) . '</div>';
+                                echo '<div class="features-item-index">' . ($i < 10 ? ('0' . $i) : $i) . '</div>';
                                 echo '</div>';
                                 echo '</div>';
 

@@ -1,8 +1,8 @@
 <?php
-namespace Be\Theme\Costumier\Section\Production;
+namespace Be\Theme\Costumier\Section\Services;
 
 /**
- * @BeConfig("服务&产品", ordering="4", icon="bi-grid-3x2-gap")
+ * @BeConfig("服务", ordering="4", icon="bi-grid-3x2-gap")
  */
 class Config
 {
@@ -100,8 +100,8 @@ class Config
      * @BeConfigItem("子项",
      *     driver = "FormItemsConfigs",
      *     items = "return [
-     *          \Be\Theme\Costumier\Section\Production\Item\Production::class,
-     *          \Be\Theme\Costumier\Section\Production\Item\RichText::class,
+     *          \Be\Theme\Costumier\Section\Services\Item\Service::class,
+     *          \Be\Theme\Costumier\Section\Services\Item\RichText::class,
      *     ]"
      * )
      */
@@ -114,7 +114,7 @@ class Config
 
         $this->items = [
             [
-                'name' => 'Production',
+                'name' => 'Service',
                 'config' => (object)[
                     'enable' => 1,
                     'icon' => 'bi-border-all',
@@ -126,7 +126,7 @@ class Config
                 ],
             ],
             [
-                'name' => 'Production',
+                'name' => 'Service',
                 'config' => (object)[
                     'enable' => 1,
                     'icon' => 'bi-puzzle',
@@ -138,7 +138,7 @@ class Config
                 ],
             ],
             [
-                'name' => 'Production',
+                'name' => 'Service',
                 'config' => (object)[
                     'enable' => 1,
                     'icon' => 'bi-slack',
@@ -150,7 +150,7 @@ class Config
                 ],
             ],
             [
-                'name' => 'Production',
+                'name' => 'Service',
                 'config' => (object)[
                     'enable' => 1,
                     'icon' => 'bi-flower1',
@@ -162,7 +162,7 @@ class Config
                 ],
             ],
             [
-                'name' => 'Production',
+                'name' => 'Service',
                 'config' => (object)[
                     'enable' => 1,
                     'icon' => 'bi-flower2',

@@ -1,10 +1,10 @@
 <?php
-namespace Be\Theme\Costumier\Section\Production\Item;
+namespace Be\Theme\Costumier\Section\Features\Item;
 
 /**
- * @BeConfig("服务&产品", icon="bi-app")
+ * @BeConfig("特色项", icon="bi-1-square")
  */
-class Production
+class Feature
 {
 
     /**
@@ -23,17 +23,10 @@ class Production
 
     /**
      * @BeConfigItem("标题",
-     *     driver = "FormItemInput"
+     *     driver = "FormItemInputTextArea"
      * )
      */
     public string $title = '';
-
-    /**
-     * @BeConfigItem("子标题",
-     *     driver = "FormItemInput"
-     * )
-     */
-    public string $subTitle = '';
 
     /**
      * @BeConfigItem("描述",
@@ -42,17 +35,5 @@ class Production
      */
     public string $description = '';
 
-    /**
-     * @BeConfigItem("链接",
-     *     driver = "FormItemInput"
-     * )
-     */
-    public string $link = '';
 
-    /**
-     * @BeConfigItem("链接文字",
-     *     driver = "FormItemInput"
-     * )
-     */
-    public string $linkText = 'READ MORE <i class="bi-plus"></i>';
 }
