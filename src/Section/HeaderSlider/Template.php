@@ -207,9 +207,6 @@ class Template extends Section
                 return;
             }
 
-            $wwwUrl = Be::getProperty('Theme.Costumier')->getWwwUrl();
-
-            echo '<link rel="stylesheet" href="' . $wwwUrl . '/lib/swiper/8.3.2/swiper-bundle.min.css">';
             $this->css();
 
             echo '<div class="header-slider">';
@@ -335,7 +332,13 @@ class Template extends Section
 
             echo '</div>';
 
-            echo '<script src="' . $wwwUrl . '/lib/swiper/8.3.2/swiper-bundle.min.js"></script>';
+            $key = 'Theme:Costumier:swiper';
+            if (!Be::hasContext($key)) {
+                $wwwUrl = Be::getProperty('Theme.Costumier')->getWwwUrl();
+                echo '<link rel="stylesheet" href="' . $wwwUrl . '/lib/swiper/8.3.2/swiper-bundle.min.css">';
+                echo '<script src="' . $wwwUrl . '/lib/swiper/8.3.2/swiper-bundle.min.js"></script>';
+            }
+
             echo '<script>';
             echo '$(".header").addClass("header-float");';
 

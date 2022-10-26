@@ -99,7 +99,7 @@ class Template extends Section
 
 
 
-        echo '@media (min-width: 1560px) {';
+        echo '@media (min-width: 1680px) {';
 
         echo '#' . $this->id . ' .features-title {';
         echo 'font-size: 3rem;';

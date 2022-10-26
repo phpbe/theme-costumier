@@ -28,6 +28,9 @@ class index
         [
             'name' => 'Theme.Costumier.Faq',
         ],
+        [
+            'name' => 'Theme.Costumier.ClientSay',
+        ],
     ];
 
     /**

@@ -116,7 +116,7 @@ class Template extends Section
 
 
 
-        echo '@media (min-width: 1560px) {';
+        echo '@media (min-width: 1680px) {';
 
         echo '#' . $this->id . ' .working-process-title {';
         echo 'font-size: 3rem;';

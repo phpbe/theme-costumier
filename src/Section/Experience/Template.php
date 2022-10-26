@@ -160,7 +160,7 @@ class Template extends Section
 
         echo '}';
 
-        echo '@media (min-width: 1560px) {';
+        echo '@media (min-width: 1680px) {';
 
         echo '#' . $this->id . ' .experience-title {';
         echo 'font-size: 3rem;';

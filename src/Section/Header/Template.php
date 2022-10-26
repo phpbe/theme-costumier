@@ -224,7 +224,7 @@ class Template extends Section
 
         echo '}';
 
-        echo '@media (min-width: 1560px) {';
+        echo '@media (min-width: 1680px) {';
         echo '.header {';
         echo 'padding-left: 60px;';
         echo 'padding-right: 60px;';

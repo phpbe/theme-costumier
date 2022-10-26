@@ -146,7 +146,7 @@ class Template extends Section
         echo 'border: #eee 1px solid;';
         echo 'padding: 1rem;';
         echo 'cursor: pointer;';
-        echo 'user-selection: none;';
+        echo 'user-select: none;';
         echo 'transition: all 0.3s ease 0s;';
         echo '}';
 
@@ -179,7 +179,7 @@ class Template extends Section
 
         echo '}';
 
-        echo '@media (min-width: 1560px) {';
+        echo '@media (min-width: 1680px) {';
 
         echo '#' . $this->id . ' .faq-title {';
         echo 'font-size: 3rem;';
