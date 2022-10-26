@@ -25,10 +25,6 @@ class Template extends Section
         echo 'max-width: 100%;';
         echo '}';
 
-        echo '#' . $this->id . ' .faq-side-a {';
-        echo '}';
-
-
         echo '#' . $this->id . ' .faq-icon {';
         echo 'font-size: 3rem;';
         echo 'padding-right: 1rem;';
@@ -62,7 +58,6 @@ class Template extends Section
         echo '}';
 
 
-
         echo '#' . $this->id . ' .faq-tag {';
         echo 'margin-top: 1rem;';
         echo '}';
@@ -84,10 +79,17 @@ class Template extends Section
         echo 'line-height: 1.5;';
         echo '}';
 
+        echo '#' . $this->id . ' .faq-link {';
+        echo 'margin-top: 1.5rem;';
+        echo '}';
 
-        echo '#' . $this->id . ' .faq-va-center {';
-        echo 'display: flex;';
-        echo 'align-items: center;';
+        echo '#' . $this->id . ' .faq-link a {';
+        echo 'font-family: "Rajdhani";';
+        echo 'color: var(--major-color);';
+        echo '}';
+
+        echo '#' . $this->id . ' .faq-link a:hover {';
+        echo 'color: var(--minor-color);';
         echo '}';
 
         echo '#' . $this->id . ' .faq-inform-title {';
@@ -120,9 +122,11 @@ class Template extends Section
 
 
         echo '#' . $this->id . ' .faq-questions {';
+        echo 'margin-top: 3rem;';
         echo '}';
 
         echo '#' . $this->id . ' .faq-question {';
+        echo 'margin-top: 1rem;';
         echo '}';
 
         echo '#' . $this->id . ' .faq-question-open {';
@@ -138,19 +142,28 @@ class Template extends Section
         echo 'font-family: "Rajdhani";';
         echo 'line-height: 1;';
         echo 'color: var(--minor-color);';
-        echo 'background-color:  rgb('. implode(' ', $rgbMinorColor).' / 5%);';
+        echo 'background-color:  rgb(' . implode(' ', $rgbMinorColor) . ' / 2%);';
+        echo 'border: #eee 1px solid;';
         echo 'padding: 1rem;';
+        echo 'cursor: pointer;';
+        echo 'user-selection: none;';
+        echo 'transition: all 0.3s ease 0s;';
         echo '}';
 
         echo '#' . $this->id . ' .faq-question-open .faq-question-title {';
-        echo 'font-size: 1.5rem;';
         echo 'color: #fff;';
         echo 'background-color: var(--minor-color);';
         echo '}';
 
 
         echo '#' . $this->id . ' .faq-question-answer {';
+        echo 'line-height: 1.5;';
+        echo 'color: #777;';
+        echo 'background-color:  rgb(' . implode(' ', $rgbMinorColor) . ' / 2%);';
+        echo 'border: #eee 1px solid;';
+        echo 'border-top: none;';
         echo 'padding: 1rem;';
+        echo 'display:none;';
         echo '}';
 
 
@@ -175,7 +188,6 @@ class Template extends Section
         echo '}';
 
 
-
         echo '</style>';
     }
 
@@ -189,8 +201,6 @@ class Template extends Section
 
             echo '<div class="be-row">';
             echo '<div class="be-col-24 be-lg-col">';
-
-            echo '<div class="faq-side-a">';
 
             echo '<div class="faq-image">';
             echo '<img src="' . $this->config->image . '" alt="' . $this->config->title . '">';
@@ -229,13 +239,19 @@ class Template extends Section
             echo '</div>';
             echo '</div>';
 
-            echo '</div>';
+
+            if ($this->config->linkText !== '' && $this->config->link !== '') {
+                echo '<div class="faq-link">';
+                echo '<a href="' . $this->config->link . '">';
+                echo $this->config->linkText;
+                echo '</a>';
+                echo '</div>';
+            }
+
 
             echo '</div>';
             echo '<div class="be-col-24 be-lg-col-auto"><div class="be-pl-400 be-mt-200"></div></div>';
-            echo '<div class="be-col-24 be-lg-col faq-va-center">';
-
-            echo '<div class="faq-side-b">';
+            echo '<div class="be-col-24 be-lg-col">';
 
             echo '<div class="faq-inform-title">';
             echo $this->config->informTitle;
@@ -249,7 +265,6 @@ class Template extends Section
             echo $this->config->description;
             echo '</div>';
 
-            echo '<div class="be-mt-200">';
             echo '<div class="faq-questions">';
             foreach ($this->config->items as $item) {
                 $itemConfig = $item['config'];
@@ -265,15 +280,37 @@ class Template extends Section
                 }
             }
             echo '</div>';
-            echo '</div>';
-
-            echo '</div>';
 
             echo '</div>';
             echo '</div>';
 
             echo '</div>';
             echo '</div>';
+            ?>
+            <script>
+                $(function () {
+                    $("#<?php echo $this->id; ?> .faq-question-title").click(function() {
+                        let $e = $(this);
+                        let $answer = $e.next();
+                        let $parent = $e.parent();
+                        if ($parent.hasClass("faq-question-open")) {
+                            $answer.slideUp();
+                            $parent.removeClass("faq-question-open");
+                        } else {
+                            if ($("#<?php echo $this->id; ?> .faq-question-open")) {
+                                $("#<?php echo $this->id; ?> .faq-question-open .faq-question-title").click();
+                            }
+
+                            $answer.slideDown();
+                            $parent.addClass("faq-question-open");
+                        }
+                    });
+
+                    $("#<?php echo $this->id; ?> .faq-question-title").first().click();
+
+                });
+            </script>
+            <?php
         }
     }
 

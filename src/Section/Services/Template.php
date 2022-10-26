@@ -127,8 +127,10 @@ class Template extends Section
         echo 'color: var(--major-color);';
         echo '}';
 
-
-
+        echo '#' . $this->id . ' .services-item-link a:hover {';
+        echo 'color: var(--minor-color);';
+        echo '}';
+        
         echo '@media (min-width: 1024px) {';
 
         echo '#' . $this->id . ' .services-title {';
