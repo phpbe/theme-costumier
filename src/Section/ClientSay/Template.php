@@ -27,6 +27,7 @@ class Template extends Section
 
         echo '#' . $this->id . ' .client-say-left {';
         echo 'position: relative;';
+        echo 'padding-right: 2rem;';
         echo '}';
 
         echo '#' . $this->id . ' .client-say-left-bg {';
