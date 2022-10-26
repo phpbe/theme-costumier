@@ -23,13 +23,10 @@ class Template extends Section
         echo '}';
 
         echo '#' . $this->id . ' .client-say-container {';
-        echo 'display: flex;';
         echo '}';
 
         echo '#' . $this->id . ' .client-say-left {';
         echo 'position: relative;';
-        echo 'flex: 0 0 50%;';
-        echo 'width: 50%;';
         echo '}';
 
         echo '#' . $this->id . ' .client-say-left-bg {';
@@ -53,8 +50,6 @@ class Template extends Section
         echo '#' . $this->id . ' .client-say-right {';
         echo 'position: relative;';
         echo 'min-height: 400px;';
-        echo 'flex: 0 0 50%;';
-        echo 'width: 50%;';
         echo '}';
 
         echo '#' . $this->id . ' .client-say-right-bg {';
@@ -150,8 +145,24 @@ class Template extends Section
 
         echo '@media (min-width: 960px) {';
 
+        echo '#' . $this->id . ' .client-say-container {';
+        echo 'display: flex;';
+        echo '}';
+
+        echo '#' . $this->id . ' .client-say-left {';
+        echo 'padding-left: 2rem;';
+        echo 'flex: 0 0 50%;';
+        echo 'width: 50%;';
+        echo '}';
+
         echo '#' . $this->id . ' .client-say-left-bg {';
         echo 'margin-left: -300px;';
+        echo '}';
+
+        echo '#' . $this->id . ' .client-say-right {';
+        echo 'flex: 0 0 50%;';
+        echo 'width: 50%;';
+        echo 'margin-top: 0;';
         echo '}';
 
         echo '#' . $this->id . ' .client-say-right-bg {';
@@ -263,8 +274,6 @@ class Template extends Section
             echo '<script>';
 
             echo 'new Swiper("#' . $this->id . ' .swiper", {';
-
-            //echo 'breakpointsBase: "container",';
 
             if ($this->config->loop) {
                 echo 'loop: true,';

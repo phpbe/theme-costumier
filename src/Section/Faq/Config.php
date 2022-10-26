@@ -45,7 +45,7 @@ class Config
 
     /**
      * @BeConfigItem("杯签内容",
-     *     driver="FormItemInput"
+     *     driver="FormItemInputTextArea"
      * )
      */
     public string $tagDescription = 'We are continually looking to improve all aspects of the manufacturing process -from our entire cycle manufacturing  to packaging and shipping.';
