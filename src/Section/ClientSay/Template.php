@@ -27,6 +27,7 @@ class Template extends Section
 
         echo '#' . $this->id . ' .client-say-left {';
         echo 'position: relative;';
+        echo 'padding-left: 2rem;';
         echo 'padding-right: 2rem;';
         echo '}';
 
@@ -126,13 +127,13 @@ class Template extends Section
 
         echo '#' . $this->id . ' .client-say-feedback-job {';
         echo 'margin-top: .5rem;';
-        echo 'color: #777;';
+        echo 'color: #999;';
         echo 'font-family: "Rajdhani";';
         echo '}';
 
         echo '#' . $this->id . ' .client-say-feedback-content {';
         echo 'margin-top: 2rem;';
-        echo 'color: #777;';
+        echo 'color: #999;';
         echo '}';
 
         echo '@media (max-width: 960px) {';
@@ -151,7 +152,7 @@ class Template extends Section
         echo '}';
 
         echo '#' . $this->id . ' .client-say-left {';
-        echo 'padding-left: 2rem;';
+        echo 'padding-left: 0;';
         echo 'flex: 0 0 50%;';
         echo 'width: 50%;';
         echo '}';
