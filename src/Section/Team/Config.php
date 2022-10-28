@@ -47,7 +47,7 @@ class Config
      *     driver = "FormItemInput"
      * )
      */
-    public string $linkText = 'Meet our team';
+    public string $linkText = 'MEET OUR TEAM <i class="bi-plus"></i>';
 
     /**
      * @BeConfigItem("图像",

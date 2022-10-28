@@ -54,11 +54,12 @@ class Template extends Section
         echo '}';
 
         echo '#' . $this->id . ' .team-link {';
-        echo 'margin-top: 2rem;';
+        echo 'margin-top: 1.5rem;';
         echo '}';
 
         echo '#' . $this->id . ' .team-link a {';
-        echo 'color: #fff;';
+        echo 'font-family: "Rajdhani";';
+        echo 'color: var(--major-color);';
         echo '}';
 
         echo '#' . $this->id . ' .team-link a:hover {';
@@ -266,6 +267,15 @@ class Template extends Section
 
             echo '</div>'; // swiper-wrapper
             echo '</div>'; // swiper
+
+            if ($this->config->linkText !== '' && $this->config->link !== '') {
+                echo '<div class="team-link">';
+                echo '<a href="' . $this->config->link . '">';
+                echo $this->config->linkText;
+                echo '</a>';
+                echo '</div>';
+            }
+
             echo '</div>'; // team-side-a-container
             echo '</div>'; // team-side-a
 
@@ -280,14 +290,6 @@ class Template extends Section
             echo '<div class="team-description">';
             echo $this->config->description;
             echo '</div>';
-
-            if ($this->config->linkText !== '' && $this->config->link !== '') {
-                echo '<div class="team-link">';
-                echo '<a href="' . $this->config->link . '">';
-                echo $this->config->linkText;
-                echo '</a>';
-                echo '</div>';
-            }
 
             if ($this->config->image !== '') {
                 echo '<div class="team-image">';

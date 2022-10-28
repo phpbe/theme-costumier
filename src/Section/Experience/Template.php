@@ -18,14 +18,10 @@ class Template extends Section
         echo $this->getCssMargin('experience');
 
         echo '#' . $this->id . ' .experience {';
-
-        echo '}';
-
         if ($this->config->backgroundImage !== '') {
-            echo '#' . $this->id . ' .experience {';
             echo 'background-image: url(' . $this->config->backgroundImage . ');';
-            echo '}';
         }
+        echo '}';
 
         echo '#' . $this->id . ' .experience-image img {';
         echo 'max-width: 100%;';
