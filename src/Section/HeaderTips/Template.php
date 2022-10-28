@@ -88,7 +88,7 @@ class Template extends Section
 
             if ($this->config->address !== '') {
                 echo '<div class="be-col-auto">';
-                echo '<i class="bi-pin-map-fill"></i> ';
+                echo '<i class="bi-geo-alt"></i> ';
                 echo '<a href="'.$this->config->addressLink.'" target="_blank">';
                 echo $this->config->address;
                 echo '</a>';

@@ -11,10 +11,21 @@
 
     composer create-project be/new
 
-### 2 安装 B2B商城 (be/app-shopb2b) 
-
-    composer require be/app-shopb2b
-
 ### 2 安装主题（be/theme-costumier）
 
     composer require be/theme-costumier
+
+
+## 适配应用
+
+### 店熵商城（be/app-shopfai）
+
+    composer require be/app-shopfai
+
+### CMS（be/app-cms）
+
+    composer require be/app-cms
+
+### 公司信息（be/app-company）
+
+    composer require be/app-company
