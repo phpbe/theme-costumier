@@ -2,7 +2,7 @@
 namespace Be\Theme\Costumier\Section\ContactUs;
 
 /**
- * @BeConfig("联系我们", ordering="9", icon="bi-people")
+ * @BeConfig("联系我们", ordering="10", icon="bi-people")
  */
 class Config
 {
@@ -100,7 +100,7 @@ class Config
 
     /**
      * @BeConfigItem("描述",
-     *     driver = "FormItemInput"
+     *     driver = "FormItemInputTextArea"
      * )
      */
     public string $description = 'Contrary to popular belief, Lorem Ipsum is not simply random text. has rootse of classical Latin literature r belief, LoremIpsum is not simply random text. in a piece of classical Latin literature r belief, LoremIpsum is not simply random text.';

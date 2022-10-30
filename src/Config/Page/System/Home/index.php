@@ -37,6 +37,9 @@ class index
         [
             'name' => 'Theme.Costumier.ContactUs',
         ],
+        [
+            'name' => 'Theme.Costumier.LatestArticles',
+        ],
     ];
 
     /**
