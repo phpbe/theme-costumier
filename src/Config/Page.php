@@ -23,11 +23,14 @@ class Page
         [
             'name' => 'Theme.Costumier.Header',
         ],
+        [
+            'name' => 'Theme.Costumier.PageTitle',
+        ],
     ];
 
     public array $middleSections = [
         [
-            'name' => 'Theme.System.PageTitle',
+            'name' => 'Theme.Costumier.PageTitle',
         ],
         [
             'name' => 'Theme.System.PageContent',
@@ -39,9 +42,6 @@ class Page
     ];
 
     public array $centerSections = [
-        [
-            'name' => 'Theme.System.PageTitle',
-        ],
         [
             'name' => 'Theme.System.PageContent',
         ],
