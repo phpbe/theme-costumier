@@ -18,14 +18,14 @@ class ContactUs
      *     driver="FormItemInput"
      * )
      */
-    public string $title = '联系我们';
+    public string $title = 'Contact Us';
 
     /**
      * @BeConfigItem("地址",
      *     driver="FormItemInput"
      * )
      */
-    public string $address = '深圳龙岗区平湖街道华南城';
+    public string $address = 'HuaNan cheng, ShenZhen City GuangDong province';
 
     /**
      * @BeConfigItem("电话",

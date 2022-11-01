@@ -39,7 +39,7 @@ class Config
      *     driver="FormItemInput"
      * )
      */
-    public string $phoneTitle = '服务电话';
+    public string $phoneTitle = 'Call Us Now!';
 
     /**
      * @BeConfigItem("电话",
@@ -53,7 +53,7 @@ class Config
      *     driver="FormItemInput"
      * )
      */
-    public string $emailTitle = '邮箱';
+    public string $emailTitle = 'Talk to us';
 
     /**
      * @BeConfigItem("邮箱",

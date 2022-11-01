@@ -18,14 +18,14 @@ class Config
      *     driver="FormItemTinymce"
      * )
      */
-    public string $text = '欢迎访问服装供应商 <a href="#">免费咨询</a>';
+    public string $text = 'Welcome to Industry & Factory Business Theme. <a href="#">GET A FREE QUOTE</a>';
 
     /**
      * @BeConfigItem("地址",
      *     driver="FormItemInput"
      * )
      */
-    public string $address = '深圳龙岗区平湖街道华南城';
+    public string $address = 'HuaNan cheng, ShenZhen City GuangDong province';
 
     /**
      * @BeConfigItem("地址链接",

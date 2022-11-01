@@ -39,7 +39,7 @@ class Config
      *     driver="FormItemInputTinymce"
      * )
      */
-    public string $description = '服务供应商作为制造商和贸易商，在纺织市场开展业务。随着时间的推移，生产的纺织品的种类增加了。';
+    public string $description = 'Fablio is operating in the most of textile market, as the it is manufacture and trader. As years go by the range produced textiles products has increased.';
 
     /**
      * @BeConfigItem("社交账号 - Facebook",,
