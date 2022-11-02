@@ -30,9 +30,6 @@ class Page
 
     public array $middleSections = [
         [
-            'name' => 'Theme.Costumier.PageTitle',
-        ],
-        [
             'name' => 'Theme.System.PageContent',
         ],
     ];
