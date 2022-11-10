@@ -74,39 +74,41 @@ class Template extends Section
      */
     public function display()
     {
-        if ($this->config->enable) {
-            $this->css();
+        if (!$this->config->enable) return;;
 
-            echo '<div class="page-title">';
-            echo '<div class="be-container">';
-            echo '<div class="be-row">';
+        if ($this->route === 'System.Home.index') return;
 
-            echo '<div class="be-col" style="overflow: hidden;">';
-            echo '<h1 class="page-title-text be-t-ellipsis">';
-            echo $this->page->pageTitle;
-            echo '</h1>';
-            echo '</div>';
+        $this->css();
 
-            echo '<div class="be-col-0 be-lg-col-auto page-title-nav">';
-            echo '<i class="bi-house-door-fill"></i> HOME / ';
+        echo '<div class="page-title">';
+        echo '<div class="be-container">';
+        echo '<div class="be-row">';
 
-            $northMenu = Be::getMenu('North');
-            $menuActiveId = $northMenu->getActiveId();
-            if ($menuActiveId !== '') {
-                foreach ($northMenu->getItems() as $item) {
-                    if ($item->id === $menuActiveId) {
-                        echo $item->label;
-                        break;
-                    }
+        echo '<div class="be-col" style="overflow: hidden;">';
+        echo '<h1 class="page-title-text be-t-ellipsis">';
+        echo $this->page->pageTitle;
+        echo '</h1>';
+        echo '</div>';
+
+        echo '<div class="be-col-0 be-lg-col-auto page-title-nav">';
+        echo '<i class="bi-house-door-fill"></i> HOME / ';
+
+        $northMenu = Be::getMenu('North');
+        $menuActiveId = $northMenu->getActiveId();
+        if ($menuActiveId !== '') {
+            foreach ($northMenu->getItems() as $item) {
+                if ($item->id === $menuActiveId) {
+                    echo $item->label;
+                    break;
                 }
             }
-
-            echo '</div>';
-
-            echo '</div>'; // be-row
-            echo '</div>'; // be-container
-            echo '</div>'; // page-title
         }
+
+        echo '</div>';
+
+        echo '</div>'; // be-row
+        echo '</div>'; // be-container
+        echo '</div>'; // page-title
     }
 
 }

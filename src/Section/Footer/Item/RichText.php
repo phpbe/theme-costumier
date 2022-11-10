@@ -22,7 +22,7 @@ class RichText
 
     /**
      * @BeConfigItem("内容",
-     *     driver="FormItemInputTinymce"
+     *     driver="FormItemTinymce"
      * )
      */
     public string $content = '<p class="be-fs-150 be-c-major">+0086-123456789</p><p>Our online scheduling and payment system is safe.</p><p class="be-mt-200"><a href="#" class="be-btn be-btn-major">Request Online Form</a></p>';

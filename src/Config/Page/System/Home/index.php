@@ -6,15 +6,6 @@ class index
 {
     public int $middle = 1;
 
-    public array $northSections = [
-        [
-            'name' => 'Theme.Costumier.HeaderTips',
-        ],
-        [
-            'name' => 'Theme.Costumier.Header',
-        ],
-    ];
-
     public array $middleSections = [
         [
             'name' => 'Theme.Costumier.HeaderSlider',
