@@ -63,7 +63,7 @@ class Template extends Section
         echo 'color: #fff;';
         echo '}';
 
-        echo '.header-menu-lv1-li-active header-menu-lv1-a,';
+        echo '.header-menu-lv1-li-active .header-menu-lv1-a,';
         echo '.header-menu-lv1-a:hover {';
         echo 'color: var(--major-color);';
         echo '}';
@@ -114,7 +114,7 @@ class Template extends Section
         echo 'transform: scaleX(1);';
         echo '}';
 
-        echo '.header-menu-lv2-li-active header-menu-lv2-a, ';
+        echo '.header-menu-lv2-li-active .header-menu-lv2-a, ';
         echo '.header-menu-lv2-a:hover {';
         echo 'color: var(--major-color);';
         echo '}';
