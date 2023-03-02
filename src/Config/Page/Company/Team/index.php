@@ -27,7 +27,7 @@ class index
     /**
      * @BeConfigItem("Meta描述",
      *     description="填写页面内容的简单描述，用于SEO",
-     *     driver = "FormItemInput"
+     *     driver = "FormItemInputTextArea"
      * )
      */
     public string $metaDescription = 'There are people who can’t start their day without having a freshly brewed cup of coffee and we understand them.';

@@ -4,9 +4,6 @@ namespace Be\Theme\Costumier\Config\Page\Cms\Article;
 
 use Be\Be;
 
-/**
- * @BeConfig("文章详情")
- */
 class detail
 {
 
