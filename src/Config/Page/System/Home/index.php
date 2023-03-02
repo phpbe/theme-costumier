@@ -2,6 +2,9 @@
 
 namespace Be\Theme\Costumier\Config\Page\System\Home;
 
+/**
+ * @BeConfig("首页")
+ */
 class index
 {
     public int $middle = 1;
@@ -53,7 +56,7 @@ class index
     /**
      * @BeConfigItem("Meta描述",
      *     description="填写页面内容的简单描述，用于SEO",
-     *     driver = "FormItemInput"
+     *     driver = "FormItemInputTextarea"
      * )
      */
     public string $metaDescription = '';

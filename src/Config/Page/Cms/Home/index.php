@@ -2,6 +2,9 @@
 
 namespace Be\Theme\Costumier\Config\Page\Cms\Home;
 
+/**
+ * @BeConfig("文章首页")
+ */
 class index
 {
 

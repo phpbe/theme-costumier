@@ -2,6 +2,9 @@
 
 namespace Be\Theme\Costumier\Config\Page\Cms\Article;
 
+/**
+ * @BeConfig("最新文章")
+ */
 class latest
 {
 

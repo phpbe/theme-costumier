@@ -2,8 +2,9 @@
 
 namespace Be\Theme\Costumier\Config\Page\Company\Team;
 
-use Be\Be;
-
+/**
+ * @BeConfig("团队")
+ */
 class index
 {
 

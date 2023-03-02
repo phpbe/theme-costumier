@@ -2,8 +2,9 @@
 
 namespace Be\Theme\Costumier\Config\Page\Company\Contact;
 
-use Be\Be;
-
+/**
+ * @BeConfig("联系我们")
+ */
 class index
 {
 
