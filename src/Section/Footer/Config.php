@@ -36,7 +36,7 @@ class Config
 
     /**
      * @BeConfigItem("描述",
-     *     driver="FormItemInputTinymce"
+     *     driver="FormItemTinymce"
      * )
      */
     public string $description = 'Fablio is operating in the most of textile market, as the it is manufacture and trader. As years go by the range produced textiles products has increased.';
